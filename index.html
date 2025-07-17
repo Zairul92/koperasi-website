@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <title>Koperasi Kita Berhad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: url('images/background.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 0 10px #ccc;
+        }
+        .center { text-align: center; }
+        .logo { width: 180px; margin: 30px auto 10px auto; display: block; }
+        h1 { font-size: 2em; margin: 10px 0 30px 0; }
+        .whatsapp-icon {
+            width: 50px;
+            height: 50px;
+            margin-top: 10px;
+            transition: transform 0.2s;
+        }
+        .whatsapp-icon:hover {
+            transform: scale(1.12);
+            box-shadow: 0 0 12px #25d366;
+        }
+        section { margin-bottom: 40px; }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            justify-content: center;
+        }
+        .member {
+            width: 100%;
+            text-align: center;
+        }
+        .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            background: #eee;
+        }
+        .products ul { padding-left: 20px; }
+        @media (max-width: 900px) {
+            .container { padding: 10px; }
+            .board { gap: 18px; }
+        }
+        @media (max-width: 600px) {
+            .board {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                gap: 18px;
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
+            .member {
+                min-width: 140px;
+            }
+        }
+        @media (max-width: 400px) {
+            .board {
+                grid-template-columns: 1fr; /* 1 column for very small screens */
+            }
+        }
+        .trademark-bar {
+            width: 100%;
+            position: relative;
+            margin-top: 30px;
+            background: rgba(200,200,200,0.2);
+            padding: 8px 0;
+        }
+        .trademark-bar marquee {
+            color: #333;
+            font-size: 1em;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+            <img src="images/logo.png" alt="Logo Koperasi" class="logo">
+            <h1>Koperasi Kita Berhad</h1>
+            <a href="https://wa.me/601112855464?text=Hi%20saya%20berminat%20atau%20tertarik%20dengan%20perkhidmatan%20yang%20anda%20tawarkan" target="_blank" title="Hubungi kami di WhatsApp">
+                <img src="images/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+            </a>
+        </div>
+
+        <section>
+            <h2>About Us</h2>
+            <p>Koperasi Kita Berhad ditubuhkan untuk memperkasakan ekonomi komuniti dan menyediakan pelbagai perkhidmatan kepada ahli.</p>
+        </section>
+
+        <section>
+            <h2>Vision and Mission</h2>
+            <p><strong>Vision:</strong> Menjadi koperasi terunggul di Malaysia yang memberi manfaat kepada ahli dan masyarakat.</p>
+            <p><strong>Mission:</strong> Menyediakan perkhidmatan berkualiti, memperkasa ekonomi ahli dan menjana kesejahteraan komuniti.</p>
+        </section>
+
+        <section>
+            <h2>Board Members</h2>
+            <div class="board">
+                <div class="member">
+                    <img src="images/member1.jpg" alt="Nor Hisham Abdullah Sani">
+                    <div><strong>Nor Hisham Abdullah Sani</strong></div>
+                    <div>Pengerusi Koperasi</div>
+                </div>
+                <div class="member">
+                    <img src="images/member2.jpg" alt="Zuriati Maarof">
+                    <div><strong>Zuriati Maarof</strong></div>
+                    <div>Setiausaha Koperasi</div>
+                </div>
+                <div class="member">
+                    <img src="images/member3.jpg" alt="Dr Nazaruddin Omar">
+                    <div><strong>Dr Nazaruddin Omar</strong></div>
+                    <div>Bendahari Koperasi</div>
+                </div>
+                <div class="member">
+                    <img src="images/member4.jpg" alt="Mohd Ismail Hori">
+                    <div><strong>Mohd Ismail Hori</strong></div>
+                    <div>Anggota Lembaga Koperasi</div>
+                </div>
+                <div class="member">
+                    <img src="images/member5.jpg" alt="Sakaria Semela">
+                    <div><strong>Sakaria Semela</strong></div>
+                    <div>Anggota Lembaga Koperasi</div>
+                </div>
+                <div class="member">
+                    <img src="images/member6.jpg" alt="Emran Ismail">
+                    <div><strong>Emran Ismail</strong></div>
+                    <div>Anggota Lembaga Koperasi</div>
+                </div>
+                <div class="member">
+                    <img src="images/member7.jpg" alt="Mohd Abd Aziz Mahmud">
+                    <div><strong>Mohd Abd Aziz Mahmud</strong></div>
+                    <div>Anggota Lembaga Koperasi</div>
+                </div>
+                <div class="member">
+                    <img src="images/member8.jpg" alt="Jaafar Sipan">
+                    <div><strong>Jaafar Sipan</strong></div>
+                    <div>Anggota Lembaga Koperasi</div>
+                </div>
+                <div class="member">
+                    <img src="images/member9.jpg" alt="Abdul Rahim Abdul Rahman">
+                    <div><strong>Abdul Rahim Abdul Rahman</strong></div>
+                    <div>Anggota Lembaga Koperasi</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>Our Product</h2>
+            <ul>
+                <li>Rotiboy</li>
+                <li>Ar-Rahnu</li>
+                <li>MY Aurah</li>
+            </ul>
+        </section>
+    </div>
+    <div class="trademark-bar">
+        <marquee behavior="scroll" direction="left">
+            © 2025 Creating by ZA Zairul. All Rights Reserved
+        </marquee>
+    </div>
+</body>
+</html>
