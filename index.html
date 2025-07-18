@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>PERSATUAN PENDUDUK TAMAN KANTAN PERMAI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('images/background.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 950px;
+      background: #fff;
+      margin: 26px auto;
+      box-shadow: 0 2px 12px #e2e2e2;
+      border-radius: 12px;
+      padding: 32px 20px;
+    }
+    .center { text-align: center; }
+    .logo { width: 140px; margin: 0 auto 12px; display: block; }
+    .main-title {
+      font-size: 2.1em;
+      font-weight: bold;
+      margin-bottom: 2px;
+      color: #2a5a9c;
+      letter-spacing: 1.1px;
+    }
+    .ppm-number {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: 1.3em;
+      font-weight: 600;
+      color: #204060;
+      margin-top: 35px;
+      margin-bottom: 14px;
+      border-left: 6px solid #ffb000;
+      padding-left: 10px;
+      letter-spacing: 0.5px;
+    }
+    .board-pics, .img-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin-bottom: 25px;
+      margin-top: 10px;
+    }
+    .board-pic-block {
+      width: 180px;
+      text-align: center;
+      background: #fafbff;
+      border-radius: 7px;
+      box-shadow: 0 1px 7px #ddd;
+      margin-bottom: 2px;
+      padding: 7px 3px 12px;
+    }
+    .board-pic, .popup-img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 100px;
+      box-shadow: 0 0 10px #ccc;
+      margin-bottom: 7px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .popup-img {
+      width: 190px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .zoomed {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(2.2);
+      z-index: 9999;
+      box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    }
+    .zoom-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 9998;
+    }
+    .caption {
+      font-size: 0.97em;
+      color: #205080;
+      font-weight: bold;
+      margin-bottom: 1px;
+    }
+    .caption-sub {
+      font-size: 0.93em;
+      color: #555;
+      margin-bottom: 2px;
+    }
+    .gallery-caption {
+      font-size: 1em;
+      color: #203060;
+      margin-bottom: 21px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .trademark-bar {
+      width: 100%;
+      position: relative;
+      margin-top: 30px;
+      background: #eaeaea;
+      padding: 8px 0;
+    }
+    .trademark-bar marquee {
+      color: #333;
+      font-size: 1em;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const zoomableImages = document.querySelectorAll('.board-pic, .popup-img');
+      zoomableImages.forEach(img => {
+        img.addEventListener('click', function () {
+          if (img.classList.contains('zoomed')) {
+            img.classList.remove('zoomed');
+            document.querySelector('.zoom-overlay').remove();
+          } else {
+            img.classList.add('zoomed');
+            const overlay = document.createElement('div');
+            overlay.classList.add('zoom-overlay');
+            document.body.appendChild(overlay);
+            overlay.addEventListener('click', () => {
+              img.classList.remove('zoomed');
+              overlay.remove();
+            });
+          }
+        });
+      });
+    });
+  </script>
+  <div class="container">
+    <div class="section-title">PEJABAT KABIN PERTAMA PERSATUAN PENDUDUK</div>
+    <div class="img-gallery">
+      <img src="images/kabinpertama1.jpg" alt="Kabin Pertama 1" class="popup-img">
+      <img src="images/kabinpertama2.jpg" alt="Kabin Pertama 2" class="popup-img">
+      <img src="images/kabinpertama3.jpg" alt="Kabin Pertama 3" class="popup-img">
+      <img src="images/kabinpertama4.jpg" alt="Kabin Pertama 4" class="popup-img">
+    </div>
+    <div class="gallery-caption">
+      <b>KETERANGAN RINGKAS:</b><br>
+      Pada 18 Februari 2025 sebuah Syarikat KEB Land Sdn Bhd melalui Encik Azman bin Mohamad Zin telah berbesar hati untuk memberikan sumbangan sebiji Kabin berbentuk Kontena (HevyDuty) kepada Persatuan Penduduk untuk menjalankan Pengurusan dengan lebih baik dan terurus dengan Kos Penghantaran secara percuma.
+    </div>
+    <div class="section-title">PEJABAT KABIN KEDUA PERSATUAN PENDUDUK</div>
+    <div class="img-gallery">
+      <img src="images/kabinkedua1.jpg" alt="Kabin Kedua 1" class="popup-img">
+      <img src="images/kabinkedua2.jpg" alt="Kabin Kedua 2" class="popup-img">
+      <img src="images/kabinkedua3.jpg" alt="Kabin Kedua 3" class="popup-img">
+      <img src="images/kabinkedua4.jpg" alt="Kabin Kedua 4" class="popup-img">
+    </div>
+    <div class="gallery-caption">
+      <b>KETERANGAN RINGKAS:</b><br>
+      Pada 6 Mac 2025 sekali lagi Syarikat KEB Land Sdn Bhd telah berbesar hati untuk memberikan sumbangan sebiji lagi Kabin kepada Persatuan Penduduk untuk menjalankan Pengurusan dengan lebih baik dan terurus dengan Kos Penghantaran secara percuma.
+    </div>
+    <div class="section-title">AKTIVITI / PROGRAM : GOTONG ROYONG PERDANA PADA 23 FEBRUARI 2025</div>
+    <div class="img-gallery">
+      <img src="images/gotong1.jpg" alt="Gotong Royong 1" class="popup-img">
+      <img src="images/gotong2.jpg" alt="Gotong Royong 2" class="popup-img">
+      <img src="images/gotong3.jpg" alt="Gotong Royong 3" class="popup-img">
+      <img src="images/gotong4.jpg" alt="Gotong Royong 4" class="popup-img">
+      <img src="images/gotong5.jpg" alt="Gotong Royong 5" class="popup-img">
+    </div>
+    <div class="gallery-caption">
+      <b>KETERANGAN PROGRAM GOTONG ROYONG PERDANA:</b><br>
+      Majlis dirasmikan oleh Tuan Haji Ir Rusman bin Abu Samah di perkarangan Parkir Dewan Komuniti Taman Kantan Permai dan seramai anggaran 100 orang telah hadir termasuk semua ketua-ketua Jalan dan Penduduk TKP.<br><br>
+      Tuan Hj Ir Rusman juga dijemput untuk melawat pejabat Kabin pertama Persatuan Penduduk dan beliau telah bersetuju untuk menyumbangkan sebiji Air-Cond berkuasa 1.0 setelah dimohon oleh Persatuan atas keperluan asas yg diperlukan dalam Pejabat Kabin tersebut.<br><br>
+      Gotong Royong Perdana bermula dari Jalan TKP 1 hingga Jalan TKP 32 dan pihak MPKJ membantu menyediakan Tong Roro sebanyak 4 biji dan selesai sepenuhnya dalam masa seminggu bagi pelaksanaan pembuangan bahan buangan Gotong Royong disemua Jalan TKP yang terlibat.<br><br>
+      ‘TERIMA KASIH TUAN HAJI IR RUSMAN BIN ABU SAMAH DAN MPKJ YANG MEMBERI KERJASAMA ATAS PROGRAM GOTONG ROYONG PERDANA PERSATUAN PENDUDUK TKP’<br>
+      TERIMA KASIH AJK , KETUA JALAN DAN PENDUDUK TKP
+    </div>
+  </div>
+  <div class="trademark-bar">
+    <marquee behavior="scroll" direction="left">
+      © 2025 Creating by ZA Zairul. All Rights Reserved
+    </marquee>
+  </div>
+</body>
+</html>
