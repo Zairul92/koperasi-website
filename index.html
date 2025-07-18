@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>PERSATUAN PENDUDUK TAMAN KANTAN PERMAI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('images/background.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    .logo {
+      width: 140px;
+      margin: 32px auto 12px auto;
+      display: block;
+      z-index: 10;
+      position: relative;
+    }
+    .main-title {
+      font-size: 2.1em;
+      font-weight: bold;
+      margin-bottom: 2px;
+      color: #2a5a9c;
+      letter-spacing: 1.1px;
+      text-align: center;
+    }
+    .ppm-number {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .container {
+      max-width: 950px;
+      margin: 0 auto 24px auto;
+      /* background: #fff; <-- DIBUANG supaya tiada kotak putih besar belakang semua */
+      box-shadow: 0 2px 12px #e2e2e2;
+      border-radius: 12px;
+      padding: 32px 20px 32px 20px;
+    }
+    .category-box {
+      background: #f9fafc;
+      border-radius: 13px;
+      box-shadow: 0 1px 8px #e3e7ef;
+      margin-bottom: 24px;
+      padding: 26px 16px 20px 16px;
+      border-left: 7px solid #2a5a9c;
+      transition: box-shadow 0.3s;
+    }
+    .category-box:hover {
+      box-shadow: 0 4px 20px #b9c5d8;
+    }
+    .center { text-align: center; }
+    .info-table {
+      margin: 0 auto 20px auto;
+      font-size: 1.07em;
+      text-align: left;
+    }
+    .info-table td { padding: 2px 6px 2px 0; vertical-align: top; }
+    .info-label { font-weight: bold; color: #2a5a9c; min-width: 170px; display: inline-block;}
+    .info-value { color: #222; }
+    .contact-list { margin: 7px 0 0 0; }
+    .contact-list li { list-style: none; margin-bottom: 2px; }
+    .mission-list {
+      margin: 0 0 14px 18px;
+      padding-left: 0;
+    }
+    .mission-list li {
+      margin-bottom: 8px;
+    }
+    .motto-section {
+      margin-bottom: 14px;
+      margin-top: 4px;
+    }
+    .motto {
+      font-size: 1.13em;
+      font-weight: bold;
+      color: #2466b1;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+    }
+    .lampiran-section {
+      margin-bottom: 24px;
+    }
+    .lampiran-img {
+      width: 320px;
+      max-width: 95vw;
+      border-radius: 7px;
+      box-shadow: 0 0 16px #ddd;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .intro-section {
+      margin-bottom: 18px;
+      font-size: 1.09em;
+      line-height: 1.6;
+    }
+    .biro-list {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    .biro-list li {
+      margin-bottom: 3px;
+    }
+    .section-title {
+      font-size: 1.3em;
+      font-weight: 600;
+      color: #204060;
+      margin-top: 0;
+      margin-bottom: 14px;
+      border-left: none;
+      padding-left: 0;
+      letter-spacing: 0.5px;
+    }
+    .board-pics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin-bottom: 25px;
+      margin-top: 10px;
+    }
+    .board-pic-block {
+      width: 180px;
+      text-align: center;
+      background: #fafbff;
+      border-radius: 7px;
+      box-shadow: 0 1px 7px #ddd;
+      margin-bottom: 2px;
+      padding: 7px 3px 12px 3px;
+    }
+    .board-pic {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 100px;
+      box-shadow: 0 0 10px #ccc;
+      margin-bottom: 7px;
+    }
+    .caption {
+      font-size: 0.97em;
+      color: #205080;
+      font-weight: bold;
+      margin-bottom: 1px;
+    }
+    .caption-sub {
+      font-size: 0.93em;
+      color: #555;
+      margin-bottom: 2px;
+    }
+    .img-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin-bottom: 12px;
+      margin-top: 12px;
+    }
+    .img-gallery img {
+      width: 190px;
+      max-width: 95vw;
+      border-radius: 10px;
+      box-shadow: 0 1px 10px #bbb;
+      margin-bottom: 2px;
+    }
+    .gallery-caption {
+      font-size: 1em;
+      color: #203060;
+      margin-bottom: 21px;
+      text-align: center;
+      font-weight: 600;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 8px; }
+      .main-title { font-size: 1.2em; }
+      .section-title { font-size: 1em; }
+      .lampiran-img, .board-pic { width: 99vw; }
+      .img-gallery img { width: 97vw; }
+      .board-pics { flex-direction: column; gap: 8px; }
+      .board-pic-block { width: 97vw; }
+      .category-box { padding: 14px 2vw 14px 2vw; }
+    }
+    .trademark-bar {
+      width: 100%;
+      position: relative;
+      margin-top: 30px;
+      background: #eaeaea;
+      padding: 8px 0;
+    }
+    .trademark-bar marquee {
+      color: #333;
+      font-size: 1em;
+      font-family: inherit;
+    }
+    /* Popup styling */
+    .popup-overlay {
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadein 0.25s;
+    }
+    .popup-img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 13px;
+      box-shadow: 0 0 48px #000b;
+      background: #fff;
+      animation: zoomin 0.25s;
+      border: 6px solid #fff;
+    }
+    @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes zoomin { from { transform: scale(0.85); } to { transform: scale(1); } }
+  </style>
+</head>
+<body>
+  <!-- LOGO DILUAR CONTAINER -->
+  <img src="images/logo.png" alt="Logo Persatuan" class="logo">
+  <div class="main-title">PERSATUAN PENDUDUK TAMAN KANTAN PERMAI</div>
+  <div class="ppm-number">(No. PPM-014-10-19112018)</div>
+  <div class="container">
+    <div class="category-box">
+      <table class="info-table">
+        <tr>
+          <td class="info-label">ALAMAT SIJIL PENDAFTARAN:</td>
+          <td class="info-value">NO. 28 JALAN TKP 1<br>TAMAN KANTAN PERMAI<br>43000 KAJANG</td>
+        </tr>
+        <tr>
+          <td class="info-label">ALAMAT SURAT MENYURAT:</td>
+          <td class="info-value">637 JALAN TKP 11<br>TAMAN KANTAN PERMAI<br>43000 KAJANG</td>
+        </tr>
+        <tr>
+          <td class="info-label">EMAIL:</td>
+          <td class="info-value"><a href="mailto:ismail.gtiglobal@gmail.com">ismail.gtiglobal@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td class="info-label">NO. UNTUK DIHUBUNGI:</td>
+          <td class="info-value">
+            <ul class="contact-list">
+              <li>011-23047641 (Pengerusi)</li>
+              <li>016-2834545 (Timbalan Pengerusi)</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="category-box">
+      <div class="section-title">MISI</div>
+      <ul class="mission-list">
+        <li>MARTABATKAN NILAI KEHARMONIAN / UKHWAH DALAM MASYARAKAT SETEMPAT DAN SENTIASA IKUT GARIS PANDUAN PERATURAN PERSATUAN SEDIA ADA</li>
+      </ul>
+      <div class="section-title">VISI</div>
+      <ul class="mission-list">
+        <li>KESEJAHTERAAN SOSIAL DAN KEPENTINGAN AHLI DENGAN MENGUKUHKAN ORGANISASI PERSATUAN DAN CAKNA DENGAN MASYARAKAT SEKELILING MELALUI TANGGUNGJAWAB SOSIAL KORPORAT (CSR)</li>
+      </ul>
+      <div class="motto-section center">
+        <div class="motto">JIRAN SEPAKAT BAWA BERKAT</div>
+        <div class="motto">MENJANA EKONOMI KOMUNITI</div>
+      </div>
+    </div>
+    <div class="category-box">
+      <div class="section-title">SIJIL PENDAFTARAN</div>
+      <div class="lampiran-section center">
+        <img src="images/sijilpendaftaran.png" alt="Sijil Pendaftaran" class="lampiran-img">
+      </div>
+    </div>
+    <div class="category-box">
+      <div class="section-title">PENGENALAN RINGKAS</div>
+      <div class="intro-section">
+        Persatuan Penduduk ini di daftarkan pada 19 November 2018 dan Mesyuaarat Agung Pertama diadakan pada 24 Mac 2019 di Dewan Sekolah Kebangsaan Kantan Permai dengan keahlian berdaftar seramai 628 orang dan kehadiran dalam AGM seramai 104 orang.
+        <br><br>
+        Mesyuarat Ahli Jawatankuasa Pertama diadakan pada 23 Mei 2019 di Surau An Nur Taman Kantan Permai dengan kehadiran Ahli Jawatankuasa seramai 6 orang.
+        <br><br>
+        Mesyuarat Agung kedua pada 8 Disember 2024 di Dewan Komuniti Taman Kantan Permai dengan keahlian berdaftar 764 orang dan kehadiran dalam AGM seramai 79 orang.
+        <br><br>
+        Mesyuarat Ahli Jawatankuasa Pertama diadakan pada 21 Disember 2024 di Surau An Nur dengan kehadiran AJK seramai 9 orang dan dipersetujui untuk melantik ketua-ketua Biro diantaranya:
+        <ul class="biro-list">
+          <li>1. Biro Pengurusan / Kewangan</li>
+          <li>2. Biro Kebajikan / Ziarah</li>
+          <li>3. Biro Keselamatam / Kebersihan</li>
+          <li>4. Biro Sukan / Riadah</li>
+          <li>5. Biro Pemuda</li>
+          <li>6. Biro Wanita</li>
+          <li>7. Biro Liputan Media (diujudkan pada 22 Jun 2025)</li>
+          <li>8. Biro Tugas-tugas Khas / Am (diujudkan pada 19 Julai 2025)</li>
+        </ul>
+        Mesyuarat Ahli Jawatankuasa ketiga diadakan pada 23 Mac 2025 di Pejabat Kabin Persatuan penduduk dengan kehadiran AJK seramai 6 orang.
+      </div>
+    </div>
+    <div class="category-box">
+      <div class="section-title">FOTO AHLI JAWATANKUASA PERSATUAN PENDUDUK TAMAN KANTAN PERMAI SESSI 2025 / 2027</div>
+      <div class="center" style="margin-bottom:28px;">
+        <img src="images/semuaahli.jpg" alt="Foto Berkumpulan AJK 2025/2027" style="width:100%;max-width:600px;border-radius:10px;box-shadow:0 2px 12px #bbb;">
+      </div>
+    </div>
+    <div class="category-box">
+      <div class="section-title">AHLI JAWATANKUASA PERSATUAN PENDUDUK TAMAN KANTAN PERMAI SESSI 2025 / 2027</div>
+      <div class="board-pics">
+        <div class="board-pic-block">
+          <img src="images/member1.jpg" class="board-pic" alt="MOHD ISMAIL BIN HORI">
+          <div class="caption">MOHD ISMAIL BIN HORI</div>
+          <div class="caption-sub">PENGERUSI<br>011-23047641</div>
+        </div>
+        <div class="board-pic-block">
+          <img src="images/member2.jpg" class="board-pic" alt="AZMAN BIN MOHAMAD ZIN">
+          <div class="caption">AZMAN BIN MOHAMAD ZIN</div>
+          <div class="caption-sub">TIMBALAN PENGERUSI<br>016-2834545</div>
+        </div>
+        <div class="board-pic-block">
+          <img src="images/member3.jpg" class="board-pic" alt="ALI ANUAR BIN YAAKOP">
+          <div class="caption">ALI ANUAR BIN YAAKOP</div>
+          <div class="caption-sub">SETIAUSAHA<br>013-6806519</div>
+        </div>
+        <div class="board-pic-block">
+          <img src="images/member4.jpg" class="board-pic" alt="MOHD KHAIRUL IZWAN BIN AZIMAT">
+          <div class="caption">MOHD KHAIRUL IZWAN BIN AZIMAT</div>
+          <div class="caption-sub">BIRO KESELAMATAN / KEBERSIHAN<br>017-3795069</div>
+        </div>
+        <div class="board-pic-block">
+          <img src="images/member5.jpg" class="board-pic" alt="MOHD SAFRIZAN BIN MUSTAFA">
+          <div class="caption">MOHD SAFRIZAN BIN MUSTAFA</div>
+          <div class="caption-sub">BENDAHARI<br>017-6966941</div>
+        </div>
+        <div class="board-pic-block">
+          <img src="images/member6.jpg" class="board-pic" alt="HJ MUSARUDIN BIN SAHI">
+          <div class="caption">HJ MUSARUDIN BIN SAHI</div>
+          <div class="caption-sub">BIRO KEBAJIKAN / ZIARAH<br>016-3535644</div>
+        </div>
+        <div class="board-pic-block">
+          <img src="images/member7.jpg" class="board-pic" alt="MUHAMMAD SHUKRI BIN SUIB">
+          <div class="caption">MUHAMMAD SHUKRI BIN SUIB</div>
+          <div class="caption-sub">BIRO SUKAN / RIADAH<br>013-4004530</div>
+        </div>
+        <div class="board-pic-block">
+          <img src="images/member8.jpg" class="board-pic" alt="HISHAMUDIN BIN SHAMSUDIN">
+          <div class="caption">HISHAMUDIN BIN SHAMSUDIN</div>
+          <div class="caption-sub">BIRO PEMUDA<br>011-37068344</div>
+        </div>
+        <div class="board-pic-block">
+          <img src="images/member9.jpg" class="board-pic" alt="AKMAR SARI BINTI NAZRI">
+          <div class="caption">AKMAR SARI BINTI NAZRI</div>
+          <div class="caption-sub">BIRO WANITA<br>011-33333616</div>
+        </div>
+        <div class="board-pic-block">
+          <img src="images/member10.jpg" class="board-pic" alt="RIDZUAN BIN MANAP">
+          <div class="caption">RIDZUAN BIN MANAP</div>
+          <div class="caption-sub">BIRO TUGAS-TUGAS KHAS / AM<br>016-3585924</div>
+        </div>
+        <div class="board-pic-block">
+          <img src="images/member11.jpg" class="board-pic" alt="MOHD ZAINI BIN SAMSUL HADI">
+          <div class="caption">MOHD ZAINI BIN SAMSUL HADI</div>
+          <div class="caption-sub">BIRO LIPUTAN MEDIA<br>017-6392347</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-box">
+      <div class="section-title">PEJABAT KABIN PERTAMA PERSATUAN PENDUDUK</div>
+      <div class="img-gallery">
+        <img src="images/kabinpertama1.jpg" alt="Kabin Pertama 1">
+        <img src="images/kabinpertama2.jpg" alt="Kabin Pertama 2">
+        <img src="images/kabinpertama3.jpg" alt="Kabin Pertama 3">
+        <img src="images/kabinpertama4.jpg" alt="Kabin Pertama 4">
+      </div>
+      <div class="gallery-caption">
+        <b>KETERANGAN RINGKAS:</b><br>
+        Pada 18 Februari 2025 sebuah Syarikat KEB Land Sdn Bhd melalui Encik Azman bin Mohamad Zin telah berbesar hati untuk memberikan sumbangan sebiji Kabin berbentuk Kontena (HevyDuty) kepada Persatuan Penduduk untuk menjalankan Pengurusan dengan lebih baik dan terurus dengan Kos Penghantaran secara percuma.
+      </div>
+    </div>
+    <div class="category-box">
+      <div class="section-title">PEJABAT KABIN KEDUA PERSATUAN PENDUDUK</div>
+      <div class="img-gallery">
+        <img src="images/kabinkedua1.jpg" alt="Kabin Kedua 1">
+        <img src="images/kabinkedua2.jpg" alt="Kabin Kedua 2">
+        <img src="images/kabinkedua3.jpg" alt="Kabin Kedua 3">
+        <img src="images/kabinkedua4.jpg" alt="Kabin Kedua 4">
+      </div>
+      <div class="gallery-caption">
+        <b>KETERANGAN RINGKAS:</b><br>
+        Pada 6 Mac 2025 sekali lagi Syarikat KEB Land Sdn Bhd telah berbesar hati untuk memberikan sumbangan sebiji lagi Kabin kepada Persatuan Penduduk untuk menjalankan Pengurusan dengan lebih baik dan terurus dengan Kos Penghantaran secara percuma.
+      </div>
+    </div>
+    <div class="category-box">
+      <div class="section-title">AKTIVITI / PROGRAM : GOTONG ROYONG PERDANA PADA 23 FEBRUARI 2025</div>
+      <div class="img-gallery">
+        <img src="images/gotong1.jpg" alt="Gotong Royong 1">
+        <img src="images/gotong2.jpg" alt="Gotong Royong 2">
+        <img src="images/gotong3.jpg" alt="Gotong Royong 3">
+        <img src="images/gotong4.jpg" alt="Gotong Royong 4">
+        <img src="images/gotong5.jpg" alt="Gotong Royong 5">
+      </div>
+      <div class="gallery-caption">
+        <b>Keterangan Program Gotong Royong Perdana :</b><br>
+        Majlis dirasmikan oleh Tuan Haji Ir Rusman bin Abu Samah di perkarangan Parkir Dewan Komuniti Taman Kantan Permai dan seramai anggaran 100 orang telah hadir termasuk semua ketua-ketua Jalan dan Penduduk TKP.<br><br>
+        Tuan Hj Ir Rusman juga dijemput untuk melawat pejabat Kabin pertama Persatuan Penduduk dan beliau telah bersetuju untuk menyumbangkan sebiji Air-Cond berkuasa 1.0 setelah dimohon oleh Persatuan atas keperluan asas yg diperlukan dalam Pejabat Kabin tersebut.<br><br>
+        Gotong Royong Perdana bermula dari Jalan TKP 1 hingga Jalan TKP 32 dan pihak MPKJ membantu menyediakan Tong Roro sebanyak 4 biji dan selesai sepenuhnya dalam masa seminggu bagi pelaksanaan pembuangan bahan buangan Gotong Royong disemua Jalan TKP yang terlibat.<br><br>
+        ‘TERIMA KASIH TUAN HAJI IR RUSMAN BIN ABU SAMAH DAN MPKJ YANG MEMBERI KERJASAMA ATAS PROGRAM GOTONG ROYONG PERDANA PERSATUAN PENDUDUK TKP’<br>
+        TERIMA KASIH AJK , KETUA JALAN DAN PENDUDUK TKP
+      </div>
+    </div>
+  </div>
+  <div class="trademark-bar">
+    <marquee behavior="scroll" direction="left">
+      © 2025 Creating by ZA Zairul. All Rights Reserved
+    </marquee>
+  </div>
+  <script>
+    // Popup for all images except logo
+    document.addEventListener('DOMContentLoaded', function () {
+      document.body.addEventListener('click', function (e) {
+        // Only target images, not .logo
+        if (e.target.tagName === 'IMG' && !e.target.classList.contains('logo')) {
+          // Remove previous popup if exist
+          const exist = document.querySelector('.popup-overlay');
+          if (exist) exist.remove();
+
+          // Create overlay
+          const overlay = document.createElement('div');
+          overlay.className = 'popup-overlay';
+          // Create popup image
+          const img = document.createElement('img');
+          img.className = 'popup-img';
+          img.src = e.target.src;
+          img.alt = e.target.alt;
+          overlay.appendChild(img);
+          document.body.appendChild(overlay);
+
+          // Close popup when click overlay (but not image)
+          overlay.addEventListener('click', function(event) {
+            if (event.target === overlay) overlay.remove();
+          });
+        }
+      });
+      // ESC to close
+      document.addEventListener('keydown', function(e){
+        if (e.key === "Escape") {
+          const overlay = document.querySelector('.popup-overlay');
+          if(overlay) overlay.remove();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
